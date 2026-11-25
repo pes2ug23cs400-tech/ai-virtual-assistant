@@ -114,15 +114,32 @@ function SignUp() {
       console.log(result);
       setUserData(result?.data);
       navigate("/customize");
-    } catch (error) {
-      console.log(error);
-      setUserData(null);
-      setErr(
-        error.response?.data?.message || "Signup failed. Please try again."
-      );
-    } finally {
-      setLoading(false);
-    }
+    } 
+    //catch (error) {
+    //   console.log(error);
+    //   setUserData(null);
+    //   setErr(
+    //     error.response?.data?.message || "Signup failed. Please try again."
+    //   );
+    // } finally {
+    //   setLoading(false);
+    // }
+    catch (error) {
+  console.log("Signup Error:", error);
+  console.log("Backend Response:", error.response?.data);
+  console.log("Status Code:", error.response?.status);
+
+  setUserData(null);
+
+  setErr(
+    error.response?.data?.message ||
+    error.message ||
+    "Signup failed. Please try again."
+  );
+} finally {
+  setLoading(false);
+}
+      
   };
 
   return (
