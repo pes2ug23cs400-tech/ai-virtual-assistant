@@ -14,7 +14,7 @@
 
 // export default Card;
 import React from "react";
-import { userDataContext } from "../context/userContext";
+import { userDataContext } from "../context/UserContext";
 import { useContext } from "react";
 
 function Card({ image }) {
