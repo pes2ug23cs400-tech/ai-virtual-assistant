@@ -466,7 +466,7 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { userDataContext } from '../context/userContext';
+import { userDataContext } from "../context/UserContext";
 import aiImg from '../assets/ai.gif';
 import userImg from '../assets/user.gif';
 import { CgMenuRight } from "react-icons/cg";
