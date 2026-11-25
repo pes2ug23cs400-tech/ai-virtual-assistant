@@ -31,7 +31,7 @@ import SignIn from "./pages/SignIn";
 import Customize from "./pages/Customize";
 import Home from "./pages/Home";
 import { useContext } from "react";
-import { userDataContext } from "./context/userContext";
+import { userDataContext } from "./context/UserContext";
 import Customize2 from "./pages/Customize2";
 
 function App() {  
